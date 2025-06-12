@@ -1,0 +1,40 @@
+import React from "react";
+import { Link } from "react-router-dom";
+const Header = () => {
+  return (
+    <header className="shadow-2xl py-4 flex items-center justify-between">
+      <div>
+        <Link
+          to="/"
+          className="hover:text-pink-500 transition font-bold font-georgia text-2xl pl-10"
+        >
+          BabyGal
+        </Link>
+      </div>
+      <nav className="md:flex space-x-12 text-lg font-serif text-black pr-10 hidden">
+        <Link to="/" className="hover:text-blue-300 transition">
+          Courses
+        </Link>
+        <Link to="/" className="hover:text-blue-300 transition">
+          Services
+        </Link>
+        <Link to="/" className="hover:text-blue-300 transition">
+          Events
+        </Link>
+        <Link to="/" className="hover:text-blue-300 transition">
+          Organizations
+        </Link>
+        <Link to="/" className="hover:text-blue-300 transition">
+          Contact
+        </Link>
+      </nav>
+      <div className="pr-10">
+        <button className="text-black font-serif px-4 py-2 border border-pink-500 rounded-xl hover:bg-pink-500 hover:text-black transition">
+          Login/Sign Up
+        </button>
+      </div>
+    </header>
+  );
+};
+
+export default Header;
