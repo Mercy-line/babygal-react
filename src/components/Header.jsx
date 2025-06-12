@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 const Header = () => {
   return (
-    <header className="shadow-2xl py-4 flex items-center justify-between">
+    <header  className="shadow-2xl py-4 flex items-center justify-between top-0 sticky bg-white  ">
       <div>
         <Link
           to="/"
