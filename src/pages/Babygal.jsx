@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../components/Header";
 import logo from "../assets/graduation1.jpg";
 import Footer from "../components/Footer";
+import MyDateSelector from "../components/MyDateSelector";
 const Babygal = () => {
   return (
     <section className="">
@@ -166,12 +167,12 @@ const Babygal = () => {
           </section>
 
           <section className="m-20">
-            <div className="text-black font-bold text-2xl font-serif py-10">
+            <h3 className="text-black font-bold text-2xl font-serif py-10">
               Upcoming Events
-            </div>
-            <div>
-              <p>DATE BY SELECTION</p>
-            </div>
+            </h3>
+           <MyDateSelector/>
+           </section>
+           <section>
             <div>
               {" "}
               <p>SELECT COUNTY BY DROPDOWN</p>
