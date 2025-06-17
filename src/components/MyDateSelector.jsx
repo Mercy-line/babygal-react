@@ -7,16 +7,16 @@ const MyDateSelector = () => {
   return (
     <div>
         <label>
-            Select a Date:
-        </label>
-        <DatePicker
+             <DatePicker
         id="datePicker"
         selected={selectedDate}
         onChange={(date) => setSelectedDate(date)}
         dateFormat="dd/MM/yyyy"
         className="border border-pink-500 rounded-lg py-2 px-4 w-full"
-        placeholderText="Select a date"
+        placeholderText="mm/dd/yyyy"
         />
+        </label>
+       
     </div>
   );
 };

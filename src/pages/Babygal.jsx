@@ -3,6 +3,8 @@ import Header from "../components/Header";
 import logo from "../assets/graduation1.jpg";
 import Footer from "../components/Footer";
 import MyDateSelector from "../components/MyDateSelector";
+import CountySelector from "../components/CountySelector";
+
 const Babygal = () => {
   return (
     <section className="">
@@ -15,7 +17,7 @@ const Babygal = () => {
               style={{ backgroundImage: `url(${logo})` }}
             >
               <div className="text-white text-center px-5">
-                <h3 className="font-bold text-4xl font-serif ">
+                <h3 className="font-bold text-4xl font-serif text-pink-500 ">
                   Empowering Girls, Shaping Futures
                 </h3>
                 <p className="font-serif text-2xl">
@@ -29,9 +31,11 @@ const Babygal = () => {
           </section>
 
           <section className="m-20">
-            <h3 className="font-bold text-2xl font-serif">Our Services</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-full h-52">
-              <div className="shadow-sm border border-pink-200 rounded-lg p-4 ">
+            <h3 className="font-bold text-2xl font-serif text-center">
+              Our Services
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-full h-52 mt-16">
+              <div className="shadow-sm border border-pink-200 rounded-lg p-4">
                 <h2 className="font-bold font-serif text-xl text-black">
                   Counselling
                 </h2>
@@ -62,12 +66,14 @@ const Babygal = () => {
                 <p className="font-serif text-grey mt-4">
                   Providing necessities like sanitary pads and clothing
                 </p>
-              </div>
+              </div>  
             </div>
           </section>
 
-          <section className="m-20">
-            <div className="bg-pink-500 font-bold text-2xl font-serif py-10">Testimonials</div>
+          <section className="m-16">
+            <div className="bg-pink-500 font-bold text-2xl text-white text-center font-serif py-10">
+              Testimonials
+            </div>
             <div className="py-36 rounded-2xl shadow-md border p-4 bg-pink-100">
               <p className="font-serif text-grey">
                 As a teen mom,BabyGal provided me with the resources and
@@ -76,12 +82,14 @@ const Babygal = () => {
               </p>
               <p>Emily Rodriguez young mother</p>
             </div>
-            <div className="bg-pink-500 py-10 ">yooh</div>
+            <div className="bg-pink-500 py-10 "></div>
           </section>
 
-          <section className="m-20">
-            <h3 className="font-bold text-2xl font-serif">Our Objectives</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4  w-full h-52">
+          <section className="m-16">
+            <h3 className="font-bold text-2xl text-center font-serif">
+              Our Objectives
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 mt-16 lg:grid-cols-4 gap-4  w-full h-52">
               <div className="shadow-md border border-pink-200 rounded-lg p-4">
                 <h2 className="font-bold font-serif text-xl text-black">
                   Empower Girls
@@ -120,10 +128,12 @@ const Babygal = () => {
             </div>
           </section>
 
-          <section className="m-20">
-            <h3 className="font-bold text-2xl font-serif">Our Partners</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-full h-52">
-              <div  className="shadow-md border border-pink-200 rounded-lg p-4">
+          <section className="m-16">
+            <h3 className="font-bold text-2xl text-center font-serif">
+              Our Partners
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 mt-16 lg:grid-cols-4 gap-4 w-full h-52">
+              <div className="shadow-md border border-pink-200 rounded-lg p-4">
                 <h2 className="font-bold font-serif text-xl text-black">
                   Girl Effect
                 </h2>
@@ -146,11 +156,11 @@ const Babygal = () => {
             </div>
           </section>
 
-          <section className="m-20">
-            <div className="bg-pink-500 font-bold text-2xl font-serif py-10">
+          <section className="m-16">
+            <div className="bg-pink-500 font-bold text-2xl text-white text-center font-serif py-10">
               Our Mission
             </div>
-            <div  className="py-36 rounded-2xl shadow-md border p-4 bg-pink-100">
+            <div className="py-36 rounded-2xl shadow-md border p-4 bg-pink-100">
               <h3 className="font-bold font-serif text-xl text-black">
                 Empowering Girls,Transforming Communities
               </h3>
@@ -163,27 +173,22 @@ const Babygal = () => {
                 communities and build a more equitable world for all
               </p>
             </div>
-            <div className="bg-pink-500 font-bold text-2xl font-serif py-10">yooh</div>
+            <div className="bg-pink-500 font-bold text-2xl text-white font-serif py-10"></div>
           </section>
 
-          <section className="m-20">
+          <section className="m-16">
             <h3 className="text-black font-bold text-2xl font-serif py-10">
               Upcoming Events
             </h3>
-           <MyDateSelector/>
-           </section>
-           <section>
-            <div>
-              {" "}
-              <p>SELECT COUNTY BY DROPDOWN</p>
-            </div>
+            <MyDateSelector />
+            <CountySelector />
             <button className="bg-pink-500 text-white font-serif font-bold px-4 py-2 border border-pink-500 rounded-lg">
               filter
             </button>
           </section>
 
-          <section className="m-20">
-            <div  className="font-bold text-2xl font-serif py-8">
+          <section className="m-16">
+            <div className="font-bold text-2xl font-serif py-8">
               Available Courses
             </div>
             <div className="shadow-md border border-pink-200 rounded-lg p-4">
@@ -192,18 +197,18 @@ const Babygal = () => {
               </h2>
               <p className="font-serif text-grey mt-4">
                 A beginner friendly data science
-              </p >
+              </p>
               <p className="font-serif text-grey mt-4">Modules:</p>
               <p> . Module 1</p>
               <p> . Module 2</p>
-            
-            <button className="bg-pink-500 text-white font-serif font-bold px-20 py-2 border border-pink-500 rounded-lg mt-2">
-              Enroll Now
-            </button>
+
+              <button className="bg-pink-500 text-white font-serif font-bold px-20 py-2 border border-pink-500 rounded-lg mt-2">
+                Enroll Now
+              </button>
             </div>
           </section>
         </section>
-        < Footer/>
+        <Footer />
       </div>
     </section>
   );
