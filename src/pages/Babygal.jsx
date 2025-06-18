@@ -4,8 +4,71 @@ import logo from "../assets/graduation1.jpg";
 import Footer from "../components/Footer";
 import MyDateSelector from "../components/MyDateSelector";
 import CountySelector from "../components/CountySelector";
+import ServiceCard from "../components/ServiceCard";
+import ObjectiveCard from "../components/ObjectiveCard";
+import PartnerCard from "../components/PartnerCard";
 
 const Babygal = () => {
+  //mock data
+  const services = [
+    {
+      title: "Counselling",
+      description: "Professional support for emotional and mental well being",
+    },
+    {
+      title: " Education",
+      description: "Empowering through knowledge & skill development",
+    },
+    {
+      title: "Rights Protection",
+      description: "Advocating for and safeguarding girls rights",
+    },
+    {
+      title: "Essential Supplies",
+      description: "Providing necessities like sanitary pads and clothing",
+    },
+
+  ];
+
+  const objectives = [
+    {
+      title: "Empower Girls",
+      description: "Provide Resources and Support for Personal Growth and Development",
+    },
+    {
+      title: "Promote Education",
+      description: "Ensure Access to Quality Education and Skill-building Opportunities",
+    },
+    {
+      title: "Build Community",
+      description: "Foster a Support Network for Girls",
+    },
+    {
+      title: "Advocating for Rights",
+      description: "Champion Policies that protect and empower girls and young women",
+    },
+  ];
+  const partners = [
+    {
+      title: "Unicef",
+      description:
+        "Provide Resources and Support for Personal Growth and Development",
+    },
+    {
+      title: "WHO",
+      description:
+        "Ensure Access to Quality Education and Skill-building Opportunities",
+    },
+    {
+      title: "Girl Effect",
+      description: "Foster a Support Network for Girls",
+    },
+    {
+      title: "Save the Children",
+      description:
+        "Champion Policies that protect and empower girls and young women",
+    },
+  ];
   return (
     <section className="">
       <div>
@@ -31,42 +94,13 @@ const Babygal = () => {
           </section>
 
           <section className="m-20">
-            <h3 className="font-bold text-2xl font-serif text-center">
-              Our Services
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-full h-52 mt-16">
-              <div className="shadow-sm border border-pink-200 rounded-lg p-4">
-                <h2 className="font-bold font-serif text-xl text-black">
-                  Counselling
-                </h2>
-                <p className="font-serif text-grey mt-4">
-                  Professional support for emotional and mental well being
-                </p>
-              </div>
-              <div className="shadow-md border  border-pink-200 rounded-lg p-4">
-                <h2 className="font-bold font-serif text-xl text-black">
-                  Education
-                </h2>
-                <p className="font-serif text-grey mt-4">
-                  Empowering through knowledge & skill development
-                </p>
-              </div>
-              <div className="shadow-md border  border-pink-200 rounded-lg p-4">
-                <h2 className="font-bold font-serif text-xl text-black">
-                  Rights Protection
-                </h2>
-                <p className="font-serif text-grey mt-4">
-                  Advocating for and safeguarding girls rights
-                </p>
-              </div>
-              <div className="shadow-md border  border-pink-200 rounded-lg p-4">
-                <h2 className="font-bold font-serif text-xl text-black">
-                  Essential Supplies
-                </h2>
-                <p className="font-serif text-grey mt-4">
-                  Providing necessities like sanitary pads and clothing
-                </p>
-              </div>  
+            <h3 className="font-bold text-2xl font-serif">Our Services</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full mt-10">
+              {/* <ServiceCard /> */}
+
+              {services.map((service, index) => (
+                <ServiceCard service={service} index={index} />
+              ))}
             </div>
           </section>
 
@@ -85,74 +119,25 @@ const Babygal = () => {
             <div className="bg-pink-500 py-10 "></div>
           </section>
 
-          <section className="m-16">
-            <h3 className="font-bold text-2xl text-center font-serif">
-              Our Objectives
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 mt-16 lg:grid-cols-4 gap-4  w-full h-52">
-              <div className="shadow-md border border-pink-200 rounded-lg p-4">
-                <h2 className="font-bold font-serif text-xl text-black">
-                  Empower Girls
-                </h2>
-                <p className="font-serif text-grey mt-4">
-                  Provide resources and support for personal growth and
-                  development
-                </p>
-              </div>
-              <div className="shadow-md border border-pink-200 rounded-lg p-4">
-                <h2 className="font-bold font-serif text-xl text-black">
-                  Promote Education
-                </h2>
-                <p className="font-serif text-grey mt-4">
-                  Ensure access to quality education and skill-building
-                  opportunities
-                </p>
-              </div>
-              <div className="shadow-md border border-pink-200 rounded-lg p-4">
-                <h2 className="font-bold font-serif text-xl text-black">
-                  Build Community
-                </h2>
-                <p className="font-serif text-grey mt-4">
-                  Foster a supportive network for girls and their families
-                </p>
-              </div>
-              <div className="shadow-md border border-pink-200 rounded-lg p-4">
-                <h2 className="font-bold font-serif text-xl text-black">
-                  Advocating for Rights
-                </h2>
-                <p className="font-serif text-grey ">
-                  Champion policies that protect and empower girls and young
-                  women
-                </p>
-              </div>
+          <section className="m-20">
+            <h3 className="font-bold text-2xl font-serif">Our Objectives</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full mt-10">
+              {/* <ObjectiveCard /> */}
+
+              {objectives.map((objective, index) => (
+                <ObjectiveCard objective={objective} index={index} />
+              ))}
             </div>
           </section>
 
-          <section className="m-16">
-            <h3 className="font-bold text-2xl text-center font-serif">
-              Our Partners
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 mt-16 lg:grid-cols-4 gap-4 w-full h-52">
-              <div className="shadow-md border border-pink-200 rounded-lg p-4">
-                <h2 className="font-bold font-serif text-xl text-black">
-                  Girl Effect
-                </h2>
-              </div>
-              <div className="shadow-md border border-pink-200 rounded-lg p-4">
-                <h2 className="font-bold font-serif text-xl text-black">
-                  Save the Children
-                </h2>
-              </div>
-              <div className="shadow-md border border-pink-200 rounded-lg p-4">
-                <h2 className="font-bold font-serif text-xl text-black">
-                  Unicef
-                </h2>
-              </div>
-              <div className="shadow-md border border-pink-200 rounded-lg p-4">
-                <h2 className="font-bold font-serif text-xl text-black">
-                  World Health Organization
-                </h2>
-              </div>
+          <section className="m-20">
+            <h3 className="font-bold text-2xl font-serif">Our Partners</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full mt-10">
+              {/* <PartnerCard /> */}
+
+              {partners.map((partner, index) => (
+                <PartnerCard partner={partner} index={index} />
+              ))}
             </div>
           </section>
 

@@ -1,8 +1,8 @@
 import React from "react";
-
+import {Link} from "react-router-dom";
 const Footer = () => {
   return (
-    <footer className="bg-gray-100">
+    <footer className="bg-gray-100 h-80">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 pl-10 pr-10 pt-10 pb-5">
         <div>
           <h3 className="font-bold font-serif hover:text-black transition font-georgia text-pink-500 text-2xl pl-10">
@@ -13,10 +13,18 @@ const Footer = () => {
 
         <div>
           <h3 className="font-bold font-serif ">Quick Links</h3>
-          <p className="mt-4">About Us</p>
-          <p>Our Services</p>
-          <p>Events</p>
-          <p>Contact Us</p>
+          <Link to={"/aboutus"}>
+            <p className="mt-4">About Us</p>
+          </Link>
+          <Link to={"/services"}>
+            <p>Our Services</p>
+          </Link>
+          <Link to={"/events"}>
+            <p>Events</p>
+          </Link>
+          <Link to={"/contact"}>
+            <p>Contact Us</p>
+          </Link>
         </div>
 
         <div>

@@ -12,7 +12,7 @@ const MyDateSelector = () => {
         selected={selectedDate}
         onChange={(date) => setSelectedDate(date)}
         dateFormat="dd/MM/yyyy"
-        className="border border-pink-500 rounded-lg py-2 px-4 w-full"
+        className="border border-pink-200 rounded-lg py-2 px-4 font-serif"
         placeholderText="mm/dd/yyyy"
         />
         </label>

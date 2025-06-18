@@ -62,7 +62,7 @@ const CountySelector = ({ onChange }) => {
 
   return (
     <Select
-    className="w-full"
+    className="p-2 rounded-lg font-serif"
       options={countyOptions}
       placeholder="Select a county"
       value={selectedOption} // inabind selected option
